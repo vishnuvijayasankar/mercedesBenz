@@ -1,0 +1,88 @@
+
+Conversation opened. 1 read message.
+
+Skip to content
+Using QBurst Mail with screen readers
+This version of Firefox is no longer supported. Please upgrade to asupported browser. Dismiss
+ 
+ 
+More
+ 
+1 of 248
+ 
+Reset.css
+Inbox
+	x
+Lawrence Moraira <lawrence@qburst.com>
+	
+Attachments2:44 PM (26 minutes ago)
+		
+to me
+Attachments area
+Preview attachment reset.css
+[Style Sheet]
+	
+Click here to Reply or Forward
+0.02 GB (0%) of 15 GB used
+Manage
+Program Policies
+Powered by
+Google
+Last account activity: 26 minutes ago
+Details
+	
+	
+	Lawrence Moraira
+Show details
+reset.css
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+Displaying reset.css.

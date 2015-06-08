@@ -1,0 +1,35 @@
+@font-face {
+   font-family: NewFont;
+   src: url(benz.otf);
+}
+html{
+	font-family: NewFont;
+	height:100%;
+}
+body{
+	background-color: black;
+}
+#Logo{
+	height:50px;
+}
+#navBar{
+	background-color: black;
+	color: silver;
+	height:auto;
+	width: :100%;
+	padding:10px;
+/*	-webkit-box-shadow: 10px 10px 5px 0px silver;
+	-moz-box-shadow: 10px 10px 5px 0px silver;
+	box-shadow: 10px 10px 5px 0px silver;*/
+	border:1px solid silver;
+}
+#title{
+	font-family: NewFont;
+	color: silver;
+	font-size: 50px;
+	padding: 10px;
+}
+#subTitle{
+	font-size: 30px;
+	padding: 10px;
+}
