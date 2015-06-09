@@ -10,8 +10,43 @@
 <body>
 
 <nav id="navBar">
-<a href="index.html"><img id="Logo" src="../images/Benz.gif"></a><span id="title" href="">Mercedes-Benz</span><em id="subTitle">Travels</em>
+<a href="index.html"><img id="Logo" src="../images/mercedes.png"></a>
 </nav>
+<aside id="sidebar">
+    <section id="driverList">
+    	<h3>DRIVERS</h3>
+    	<form>
+			<p>
+				<input type="radio" name="driver" value="driver1" checked><b>Driver 1</b>
+			</p>
+			<p><input type="radio" name="driver" value="driver2"><b>Driver 2</b>
+			</p>
+			<p><input type="radio" name="driver" value="driverall"><b>All Drivers</b>
+			</p>
+		</form> 
+    </section>
+    <section id="parametersList">
+    	<h3>PARAMETERS</h3>
+    	<form>
+			<p>
+				<input type="radio" name="options" value="score" checked><b>Score</b>
+			</p>
+			<p><input type="radio" name="options" value="acceleration"><b>Acceleration</b>
+			</p>
+			<p><input type="radio" name="options" value="breakdowns"><b>Breakdowns</b>
+			</p>
+			<p><input type="radio" name="options" value="turns"><b>Turns</b>
+			</p>
+			<p><input type="radio" name="options" value="crashes"><b>Crashes</b>
+			</p>
+
+		</form> 
+    </section>
+</aside>
+<div id="content">
+	<div id="charts"></div>
+	<div id="table"></div>
+</div>
 
 </body>
 </html>

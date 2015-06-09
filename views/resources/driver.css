@@ -7,10 +7,11 @@ html{
 	height:100%;
 }
 body{
-	background-color: black;
+	background-color: white;
+	height:100%;
 }
 #Logo{
-	height:50px;
+height:80px;
 }
 #navBar{
 	background-color: black;
@@ -18,10 +19,9 @@ body{
 	height:auto;
 	width: :100%;
 	padding:10px;
-/*	-webkit-box-shadow: 10px 10px 5px 0px silver;
-	-moz-box-shadow: 10px 10px 5px 0px silver;
-	box-shadow: 10px 10px 5px 0px silver;*/
-	border:1px solid silver;
+	-webkit-box-shadow: 10px 10px 5px 0px grey;
+	-moz-box-shadow: 10px 10px 5px 0px grey;
+	box-shadow: 10px 10px 5px 0px grey;
 }
 #title{
 	font-family: NewFont;
@@ -32,4 +32,66 @@ body{
 #subTitle{
 	font-size: 30px;
 	padding: 10px;
+}
+#sidebar{
+	display: inline;
+	position: absolute;
+	height: auto;
+	padding:10px;
+}
+#driverList, #parametersList{
+	color:white;
+
+}
+#driverList h3, #parametersList h3{	
+	margin: 0px;
+	text-align: center;
+	padding:10px;
+	color:white;
+	border-bottom:1px solid grey;
+}
+#driverList p, #parametersList p{
+	margin: 0px;
+	padding:10px;
+	padding-bottom: 0px;
+	color:black;
+}
+section{
+	margin:10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 150px;
+	background-color: silver;
+	height: auto;
+	padding:10px;
+	margin-left: 0px;
+	-webkit-box-shadow: 10px 10px 5px 0px grey;
+	-moz-box-shadow: 10px 10px 5px 0px grey;
+	box-shadow: 10px 10px 5px 0px grey;
+}
+#content{
+	display: inline-block;
+	height:100%;
+	float:right;
+	margin-top: 35px;
+	margin-right: 35px;
+	width: 80%;
+	height: 80%;
+	background-color: silver;
+	-webkit-box-shadow: 10px 10px 5px 0px grey;
+	-moz-box-shadow: 10px 10px 5px 0px grey;
+	box-shadow: 10px 10px 5px 0px grey;
+
+}
+#charts{
+	position: relative;
+	margin:auto;
+	left: 0;
+	right: 0;
+	width: 70%;
+	margin-top: 50px;
+	height: 50%;
+	background-color: white;
+
+
 }
