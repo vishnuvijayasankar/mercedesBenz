@@ -2,58 +2,63 @@
 <html>
 <head>
 	<title>Home</title>
-<link rel="stylesheet" type="text/css" href="../resources/css/reset.css">
-<link rel="stylesheet" type="text/css" href="../resources/css/driver.css">
-<link rel="icon" type="image/png" href="../assets/images/android-icon-48x48.png">
-<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/driver.css">
+	<link rel="icon" type="image/png" href="../assets/images/android-icon-48x48.png">
+	<meta charset="UTF-8">
 </head>
 <body>
 
-<nav id="navBar">
-<a href="index.html"><img id="Logo" src="../assets/images/mercedes.png"></a>
-</nav>
-<aside id="sidebar">
-    <section id="driverList">
-    	<h3>DRIVERS</h3>
-    	<form>
-			<p>
-				<input type="radio" name="driver" value="driver1" checked><b>Driver 1</b>
-			</p>
-			<p><input type="radio" name="driver" value="driver2"><b>Driver 2</b>
-			</p>
-			<p><input type="radio" name="driver" value="driverall"><b>All Drivers</b>
-			</p>
-		</form> 
-    </section>
-    <section id="parametersList">
-    	<h3>PARAMETERS</h3>
-    	<form>
-			<p>
-				<input type="radio" name="options" value="score" checked><b>Score</b>
-			</p>
-			<p><input type="radio" name="options" value="acceleration"><b>Acceleration</b>
-			</p>
-			<p><input type="radio" name="options" value="breakdowns"><b>Breakdowns</b>
-			</p>
-			<p><input type="radio" name="options" value="turns"><b>Turns</b>
-			</p>
-			<p><input type="radio" name="options" value="crashes"><b>Crashes</b>
-			</p>
+	<nav id="navBar">
+		<a href="index.html"><img id="Logo" src="../assets/images/mercedes.png"></a>
+	</nav>
+	<aside id="sidebar">
+	    <section id="driverList">
+	    	<h3>DRIVERS</h3>
+	    	<form>
+	    		<p>
+					<input type="radio" name="driver" value="driverall" checked><b>All Drivers</b>
+				</p>
+				<p>
+					<input type="radio" name="driver" value="driver1"><b>Driver 1</b>
+				</p>
+				<p>
+					<input type="radio" name="driver" value="driver2"><b>Driver 2</b>
+				</p>
+			</form> 
+	    </section>
+	    <section id="parametersList">
+	    	<h3>PARAMETERS</h3>
+	    	<form>
+				<p>
+					<input type="radio" name="options" value="score" checked><b>Score</b>
+				</p>
+				<p><input type="radio" name="options" value="acceleration"><b>Acceleration</b>
+				</p>
+				<p><input type="radio" name="options" value="breakdowns"><b>Breakdowns</b>
+				</p>
+				<p><input type="radio" name="options" value="turns"><b>Turns</b>
+				</p>
+				<p><input type="radio" name="options" value="crashes"><b>Crashes</b>
+				</p>
 
-		</form> 
-    </section>
-</aside>
-<div id="content">
-	<div id="charts"></div>
-	<div id="table"></div>
-</div>
-<footer>
-	<span>Sitemap</span>
-	<span>© Copyrights Reserved. Mercedes-Benz India Private Limited 2015-2016</span>
-	<span>Cookies</span>
-	<span>Privacy Statement & IP Disclaimer</span>
-	<span>Legal Notice</span>
-
-</footer>
+			</form> 
+	    </section>
+	</aside>
+	<div id="content">
+		<div id="charts"></div>
+		<div id="table"></div>
+	</div>
+	<footer>
+		<span>Sitemap</span>
+		<span>© Copyrights Reserved. Mercedes-Benz India Private Limited 2015-2016</span>
+		<span>Cookies</span>
+		<span>Privacy Statement & IP Disclaimer</span>
+		<span>Legal Notice</span>
+	</footer>
+	
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="../resources/js/driver.js"></script>
 </body>
 </html>
