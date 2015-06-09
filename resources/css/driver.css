@@ -9,6 +9,7 @@ html{
 body{
 	background-color: white;
 	height:100%;
+	margin:0px;
 }
 #Logo{
 height:80px;
@@ -94,4 +95,23 @@ section{
 	background-color: white;
 
 
+}
+footer{
+	bottom: 0px;
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: auto;
+    margin-top: -3em;
+    background-color: black;
+    padding:10px;
+    color:silver;
+    text-align: center;
+    cursor: pointer;
+}
+footer span{
+	border-left: 1px solid silver;
+	padding:10px;
+	display: inline-block;
+	/*border-right: 1px solid silver;*/
 }
