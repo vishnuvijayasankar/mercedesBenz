@@ -1,6 +1,6 @@
 @font-face {
    font-family: NewFont;
-   src: url(benz.otf);
+   src: url(../assets/fonts/benz.otf);
 }
 html{
 	font-family: NewFont;
