@@ -206,3 +206,16 @@ $(function () {
         }]
     });
 });
+
+$(document).ready(function(){
+        $.getJSON('../assets/json/data.json', function(data) {
+            // $("#destinations option").remove();
+            drivers = data['Drivers'];
+
+            $.each(drivers, function(id, drivers) {
+                $('#drivers').append('<div><button class="optionsButton" value="'+drivers["name"]+'"><img src="'+drivers["image"]+'">'+drivers["name"]+'</button></div>');
+            });
+        });
+    });
+// <div><button name="driver2" class="optionsButton" value="Valentino Rossi"><img src="../assets/images/rossi.jpg">Valentino Rossi</button>
+//          </div>

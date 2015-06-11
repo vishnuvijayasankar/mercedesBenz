@@ -1,6 +1,6 @@
 var	drivers = [
 	{
-		"name": "Driver 1",
+		"name": "M Schumacher",
 		"score": [75,87,41,76,89,69,81],
 		"acceleration": [7,6,2,8,1,4,6],
 		"break": [9,7,4,5,1,6,8],
@@ -8,7 +8,7 @@ var	drivers = [
 		"crash": [3,2,5,1,5,3,6]
 	},
 	{
-		"name": "Driver 2",
+		"name": "Valentino Rossi",
 		"score": [87,41,76,89,69,81,75],
 		"acceleration": [6,2,8,1,4,6,7],
 		"break": [7,4,5,1,6,8,9],
