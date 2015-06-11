@@ -138,7 +138,7 @@ footer span{
 	height:100%;
 }
 .optionsButton{
-	width:100%;
+	margin-top: 10px;
 	background-color: white;
 	cursor: pointer;
 	font-family: NewFont;
@@ -162,6 +162,12 @@ footer span{
 	padding:5px;
 	width: 50px;
 }
+section img{
+	height:35px;
+	vertical-align: middle;
+	padding:5px;
+	width: 50px;
+}
 .driverName{
 padding: 0px;
 margin: 0px;
@@ -169,9 +175,9 @@ color:black;
 }
 #allDrivers{
 	margin: 0px;
+	margin-top: 10px;
 	padding:10px;
 	color:black;
-	padding-bottom: 0;
 }
 .btnImg{
 	float:left;
