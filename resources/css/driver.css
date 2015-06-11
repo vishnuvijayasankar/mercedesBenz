@@ -50,7 +50,7 @@ section{
 	margin:10px;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	width: 160px;
+	width: auto;
 	height: auto;
 	padding:10px;
 	margin-left: 0px;
@@ -102,7 +102,7 @@ footer span{
 }
 #navBar span a{
 	text-decoration: none;
-	border-left: 1px solid #48372F;
+	border-left: 1px solid white;
 	color: white;
 	padding: 10px;
 }
@@ -122,7 +122,7 @@ footer span{
 	font-size: 45px;
 	padding: 10px;
 }*/
-#driverList div, #parametersList div{
+#parametersList div{
 	margin: 0px;
 	padding:10px;
 	color:black;
@@ -150,4 +150,20 @@ footer span{
 }
 .optionsButton:hover {
     background-color: #b2dfdb;
+}
+#driverList button img{
+	height:35px;
+	vertical-align: middle;
+	padding:5px;
+	width: 50px;
+}
+.driverName{
+padding: 0px;
+margin: 0px;
+color:black;
+}
+#allDrivers{
+	margin: 0px;
+	padding:10px;
+	color:black;
 }

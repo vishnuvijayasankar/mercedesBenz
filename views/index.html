@@ -24,14 +24,16 @@
 <div id="optionsList">
     <section id="driverList">
     	<h3>DRIVERS</h3>
-    	<form>
-			<div><input class="optionsButton" type="button" name="driver" value="All Drivers">
+    	
+			
+			<div id="drivers" class="driverName">
+				<div>
+				<button name="driver" class="optionsButton" id="allDrivers" onclick="myFunc(this.id)" value="allDrivers">
+					<img src="../assets/images/user.png">All Drivers
+				</button>
 			</div>
-			<div><input class="optionsButton" type="button" name="driver1" value="M Schumacher">
 			</div>
-			<div><input class="optionsButton" type="button" name="driver2" value="Valentino Rossi">
-			</div>
-		</form> 
+		 
     </section>
     <section id="parametersList">
     	<h3>PARAMETERS</h3>
@@ -63,8 +65,10 @@
 		<span>Legal Notice</span>
 	</footer>
 	
-	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>
 	<script src="../resources/js/driver.js"></script>
+	<script src="../resources/js/data.js"></script>
+
 </body>
 </html>

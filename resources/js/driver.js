@@ -1,179 +1,335 @@
-$("input[name='driver']").on("change", function () {
-   	var driver = $("input[type='radio'][name='driver']:checked").val();
-	var option = $("input[type='radio'][name='options']:checked").val();
-	console.log(driver);
-	console.log(option);
-	drawChart(driver,option);
+var $selectedDriver = null;
+
+function myFunc($value) {
+    console.log($value);
+    $selectedDriver = $value;
+    console.log($selectedDriver);
+}
+ 
+
+$(function () {
+    $.getJSON('../assets/json/data.json', function(data) {
+        drivers = data['Drivers'];
+        $.each(drivers, function(id, drivers) {
+            $('#drivers').append('<div><button class="optionsButton"  id="'+drivers["id"]+'" value="'+drivers["id"]+'" onclick="myFunc(this.id)"><img src="'+drivers["image"]+'">'+drivers["name"]+'</button></div>');
+        });
+    });
+
+    var driverList = $.grep(drivers, function(element, index) {
+        return element;
+    });
+
+    var Days = $.grep(days, function(element, index) {
+        return element;
+    });
+
+    var ScoresData = new Array();
+    var AccData = new Array();
+    var BrakeData = new Array();
+    var TurnData = new Array();
+    var CrashData = new Array();
+
+    for(var i=0;i<driverList.length;i++) {
+        
+        var ScoresArg = new Object();
+        var AccArg = new Object();
+        var BrakeArg = new Object();
+        var TurnArg = new Object();
+        var CrashArg = new Object();
+
+        ScoresArg.name = driverList[i].name;
+        ScoresArg.data = driverList[i].score;
+        AccArg.name = driverList[i].name;
+        AccArg.data = driverList[i].acceleration;
+        BrakeArg.name = driverList[i].name;
+        BrakeArg.data = driverList[i].break;
+        TurnArg.name = driverList[i].name;
+        TurnArg.data = driverList[i].turn;
+        CrashArg.name = driverList[i].name;
+        CrashArg.data = driverList[i].crash;
+        
+        ScoresData.push(ScoresArg);
+        AccData.push(AccArg);
+        BrakeData.push(BrakeArg);
+        TurnData.push(TurnArg);
+        CrashData.push(CrashArg);
+    }
+
+    $('#charts').highcharts({
+        title: {
+            text: 'Driver Dashboard - Scores',
+            x: -20 //center
+        },
+        xAxis: {
+            categories: Days
+        },
+        yAxis: {
+            title: {
+                text: 'Scores'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: ScoresData
+    });
+
+    var $ContainerDiv = $('#content');
+    $('input[type=radio][name=options]').change(function() {
+        if (this.value == 'score') {
+            $('#charts').highcharts({
+                title: {
+                    text: 'Driver Dashboard - Scores',
+                    x: -20 //center
+                },
+                xAxis: {
+                    categories: Days
+                },
+                yAxis: {
+                    title: {
+                        text: 'Scores'
+                    },
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    borderWidth: 0
+                },
+                series: ScoresData
+            });
+        }
+        else if (this.value == 'acceleration') {
+            $('#charts').highcharts({
+                title: {
+                    text: 'Driver Dashboard - Acceleration',
+                    x: -20 //center
+                }, 
+                xAxis: {
+                    categories: Days
+                },
+                yAxis: {
+                    title: {
+                        text: 'Acceleration'
+                    },
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    borderWidth: 0
+                },
+                series: AccData
+            });
+        }
+        else if (this.value == 'breakdowns') {
+            $('#charts').highcharts({
+                title: {
+                    text: 'Driver Dashboard - Breaks',
+                    x: -20 //center
+                },
+                xAxis: {
+                    categories: Days
+                },
+                yAxis: {
+                    title: {
+                        text: 'Breaks'
+                    },
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    borderWidth: 0
+                },
+                series: BrakeData
+            });
+        }
+        else if (this.value == 'turns') {
+            $('#charts').highcharts({
+                title: {
+                    text: 'Driver Dashboard - Sharp Turns',
+                    x: -20 //center
+                }, 
+                xAxis: {
+                    categories: Days
+                },
+                yAxis: {
+                    title: {
+                        text: 'Sharp Turns'
+                    },
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    borderWidth: 0
+                },
+                series: TurnData
+            });
+        }
+        else if (this.value == 'crashes') {
+            $('#charts').highcharts({
+                title: {
+                    text: 'Driver Dashboard - Crashes',
+                    x: -20 //center
+                }, 
+                xAxis: {
+                    categories: Days
+                },
+                yAxis: {
+                    title: {
+                        text: 'Crashes'
+                    },
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    borderWidth: 0
+                },
+                series: CrashData
+            });
+        }
+    });
+
+
+   
+    // $('#charts').highcharts({
+    //     title: {
+    //         text: 'Driver Dashboard - Acceleration',
+    //         x: -20 //center
+    //     }, 
+    //     xAxis: {
+    //         categories: Days
+    //     },
+    //     yAxis: {
+    //         title: {
+    //             text: 'Acceleration'
+    //         },
+    //         plotLines: [{
+    //             value: 0,
+    //             width: 1,
+    //             color: '#808080'
+    //         }]
+    //     },
+    //     legend: {
+    //         layout: 'vertical',
+    //         align: 'right',
+    //         verticalAlign: 'middle',
+    //         borderWidth: 0
+    //     },
+    //     series: AccData
+    // });
+    // $('#charts').highcharts({
+    //     title: {
+    //         text: 'Driver Dashboard - Breaks',
+    //         x: -20 //center
+    //     },
+    //     xAxis: {
+    //         categories: Days
+    //     },
+    //     yAxis: {
+    //         title: {
+    //             text: 'Breaks'
+    //         },
+    //         plotLines: [{
+    //             value: 0,
+    //             width: 1,
+    //             color: '#808080'
+    //         }]
+    //     },
+    //     legend: {
+    //         layout: 'vertical',
+    //         align: 'right',
+    //         verticalAlign: 'middle',
+    //         borderWidth: 0
+    //     },
+    //     series: BrakeData
+    // });
+    // $('#container4').highcharts({
+    //     title: {
+    //         text: 'Driver Dashboard - Sharp Turns',
+    //         x: -20 //center
+    //     }, 
+    //     xAxis: {
+    //         categories: Days
+    //     },
+    //     yAxis: {
+    //         title: {
+    //             text: 'Sharp Turns'
+    //         },
+    //         plotLines: [{
+    //             value: 0,
+    //             width: 1,
+    //             color: '#808080'
+    //         }]
+    //     },
+    //     legend: {
+    //         layout: 'vertical',
+    //         align: 'right',
+    //         verticalAlign: 'middle',
+    //         borderWidth: 0
+    //     },
+    //     series: TurnData
+    // });
+    // $('#container5').highcharts({
+    //     title: {
+    //         text: 'Driver Dashboard - Crashes',
+    //         x: -20 //center
+    //     }, 
+    //     xAxis: {
+    //         categories: Days
+    //     },
+    //     yAxis: {
+    //         title: {
+    //             text: 'Crashes'
+    //         },
+    //         plotLines: [{
+    //             value: 0,
+    //             width: 1,
+    //             color: '#808080'
+    //         }]
+    //     },
+    //     legend: {
+    //         layout: 'vertical',
+    //         align: 'right',
+    //         verticalAlign: 'middle',
+    //         borderWidth: 0
+    //     },
+    //     series: CrashData
+    // });
 });
-
-$("input[name='options']").on("change", function () {
-   	var driver = $("input[type='radio'][name='driver']:checked").val();
-	var option = $("input[type='radio'][name='options']:checked").val();
-	console.log(driver);
-	console.log(option);
-	drawChart(driver,option);
-});
-
-google.load('visualization', '1.1', {packages: ['corechart']});
-google.setOnLoadCallback(ScoresChart);
-/*
-function drawChart(driver,option) {
-	
-	if(driver == 'driverall') {
-		switch(option) {
-			case 'score': 		google.load('visualization', '1.1', {packages: ['corechart']});
-								google.setOnLoadCallback(ScoresChart);
-								break;
-			case 'acceleration':google.load('visualization', '1.1', {packages: ['corechart']});
-								google.setOnLoadCallback(AccelerationChart);
-								break;
-			case 'breakdowns': 	google.setOnLoadCallback(BreakChart);
-								break;
-			case 'turns': 		google.setOnLoadCallback(TurnChart);
-								break;
-			case 'crashes':		google.setOnLoadCallback(CrashChart);
-								break;			
-		}
-	}
-}
-*/
-function ScoresChart() {
-   var data = new google.visualization.DataTable();
-   data.addColumn('string', 'Day');
-   var options = {
-      title: 'Driver Scores',
-      vAxes: {
-         0: {title: 'Scores'}
-      }
-   };
-
-   $.ajax({
-      url: "../assets/json/data.json",
-      dataType: "JSON"
-   }).done(function(array) {
-      $.each(array.drivers, function() {
-         data.addColumn('number', this.name);
-      });
-      for(var j=0;j<array.drivers[0].score.length;j++) {
-         var a = array.days[j];
-         var b = array.drivers[0].score[j];
-         var c = array.drivers[1].score[j];
-         data.addRows([[a, b, c]]);
-      }
-      var chart = new google.visualization.LineChart(document.getElementById('charts'));
-      chart.draw(data, options);
-   });
-}
-/*
-function AccelerationChart() {
-   var data = new google.visualization.DataTable();
-   data.addColumn('string', 'Day');
-   var options = {
-      title: 'Event - Acceleration',
-      vAxes: {
-         0: {title: 'Acceleration'}
-      }
-   };
-
-   $.ajax({
-      url: "../assets/json/data.json",
-      dataType: "JSON"
-   }).done(function(array) {
-      $.each(array.drivers, function() {
-         data.addColumn('number', this.name);
-      });
-      for(var j=0;j<array.drivers[0].score.length;j++) {
-         var a = array.days[j];
-         var b = array.drivers[0].acceleration[j];
-         var c = array.drivers[1].acceleration[j];
-         data.addRows([[a, b, c]]);
-      }
-      var chart = new google.visualization.LineChart(document.getElementById('charts'));
-      chart.draw(data, options);
-   });   
-}
-
-function BreakChart() {
-   var data = new google.visualization.DataTable();
-   data.addColumn('string', 'Day');
-   var options = {
-      title: 'Event - Break',
-      vAxes: {
-         0: {title: 'Break'}
-      }
-   };
-
-   $.ajax({
-      url: "../assets/json/data.json",
-      dataType: "JSON"
-   }).done(function(array) {
-      $.each(array.drivers, function() {
-         data.addColumn('number', this.name);
-      });
-      for(var j=0;j<array.drivers[0].score.length;j++) {
-         var a = array.days[j];
-         var b = array.drivers[0].break[j];
-         var c = array.drivers[1].break[j];
-         data.addRows([[a, b, c]]);
-      }
-      var chart = new google.visualization.LineChart(document.getElementById('charts'));
-      chart.draw(data, options);
-   });   
-}
-
-function TurnChart() {
-   var data = new google.visualization.DataTable();
-   data.addColumn('string', 'Day');
-   var options = {
-      title: 'Event - Sharp Turn',
-      vAxes: {
-         0: {title: 'Sharp Turns'}
-      }
-   };
-
-   $.ajax({
-      url: "../assets/json/data.json",
-      dataType: "JSON"
-   }).done(function(array) {
-      $.each(array.drivers, function() {
-         data.addColumn('number', this.name);
-      });
-      for(var j=0;j<array.drivers[0].score.length;j++) {
-         var a = array.days[j];
-         var b = array.drivers[0].turn[j];
-         var c = array.drivers[1].turn[j];
-         data.addRows([[a, b, c]]);
-      }
-      var chart = new google.visualization.LineChart(document.getElementById('charts'));
-      chart.draw(data, options);
-   });   
-}
-
-function CrashChart() {
-   var data = new google.visualization.DataTable();
-   data.addColumn('string', 'Day');
-   var options = {
-      title: 'Event - Crash',
-      vAxes: {
-         0: {title: 'Crash'}
-      }
-   };
-
-   $.ajax({
-      url: "../assets/json/data.json",
-      dataType: "JSON"
-   }).done(function(array) {
-      $.each(array.drivers, function() {
-         data.addColumn('number', this.name);
-      });
-      for(var j=0;j<array.drivers[0].score.length;j++) {
-         var a = array.days[j];
-         var b = array.drivers[0].crash[j];
-         var c = array.drivers[1].crash[j];
-         data.addRows([[a, b, c]]);
-      }
-      var chart = new google.visualization.LineChart(document.getElementById('charts'));
-      chart.draw(data, options);
-   });   
-}
-*/
