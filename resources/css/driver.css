@@ -39,6 +39,7 @@ body{
 	position: absolute;
 	padding:10px;
 	width:auto;
+	padding-top: 0px;
 
 }
 #driverList h3, #parametersList h3{	
@@ -52,7 +53,7 @@ body{
 section{
 	background-color: white;
 	margin:10px;
-	margin-top: 20px;
+	margin-top: 0px;
 	margin-bottom: 20px;
 	width: auto;
 	height: auto;
@@ -74,7 +75,7 @@ section{
 	left: 0;
 	right: 0;
 	width: 80%;
-	margin-top: 50px;
+	margin-top: 5px;
 	height: 50%;
 	background-color: white;
 		box-shadow: 10px 10px 5px 0px rgba(177, 167, 163, 1);
@@ -83,7 +84,9 @@ section{
 
 }
 footer{
-    position: relative;
+    position: fixed;
+    bottom:0;
+    width:100%;
     z-index: 10;
     height: auto;
 	background-color: #004d40;
@@ -91,12 +94,12 @@ footer{
     color:white;
     text-align: center;
     cursor: pointer;
-    box-shadow: 10px -10px 5px 0px grey;
 }
 footer span{
-	border-left: 1px solid black;
+	border-left: 1px solid white;
 	padding:10px;
 	display: inline-block;
+	font-weight: bold;
 	/*border-right: 1px solid silver;*/
 }
 #navBar span{
@@ -109,6 +112,7 @@ footer span{
 	border-left: 1px solid white;
 	color: white;
 	padding: 10px;
+	font-weight: bold;
 }
 #navBar #title{
 	display: inline;
@@ -128,14 +132,15 @@ footer span{
 }*/
 #parametersList div{
 	margin: 0px;
-	padding:10px;
+	padding:15px;
 	color:black;
 	font-family: RobotoFont;
 }
 #contentBody{
 	position: relative;
 	padding: 5%;
-	height:100%;
+	height: 80%;
+	margin-bottom: 150px;
 }
 .optionsButton{
 	margin-top: 10px;
@@ -183,4 +188,18 @@ color:black;
 	float:left;
 	margin:0px;
 	padding:0px;
+}
+form{
+	margin-top: 10px;
+}
+@media (max-width: 850px) {
+	#upperNav{
+		display: none;
+	}
+}
+label{
+	cursor: pointer;
+}
+input{
+	cursor: pointer;
 }

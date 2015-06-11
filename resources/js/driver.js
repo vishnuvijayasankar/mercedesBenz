@@ -11,9 +11,10 @@ $(function () {
     $.getJSON('../assets/json/data.json', function(data) {
         drivers = data['Drivers'];
         $.each(drivers, function(id, drivers) {
-            $('#drivers').append('<div class="optionsButton"><input name="driver" type="radio" id="'+drivers["id"]+'" value="'+drivers["id"]+'" onclick="myFunc(this.id)"><img src="'+drivers["image"]+'">'+drivers["name"]+'</div>');
+            $('#drivers').append('<div class="optionsButton"><input name="driver" type="radio" id="'+drivers["id"]+'" value="'+drivers["id"]+'" onclick="myFunc(this.id)"><img src="'+drivers["image"]+'">'+'<label for="'+drivers["id"]+'">'+drivers["name"]+'</label></div>');
         });
     });
+    // <label for="alldriver">All Drivers</label>
     // <div  class="optionsButton"><input type="radio" name="allDriver" value="male"><img src="../assets/images/user.png">All Drivers</div>
 
     var driverList = $.grep(drivers, function(element, index) {
