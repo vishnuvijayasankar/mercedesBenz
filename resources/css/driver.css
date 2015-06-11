@@ -2,6 +2,10 @@
    font-family: NewFont;
    src: url(../../assets/fonts/benz.otf);
 }
+@font-face {
+   font-family: RobotoFont;
+   src: url(../../assets/fonts/Roboto-Regular);
+}
 html{
 	font-family: NewFont;
 	height:100%;
@@ -126,6 +130,7 @@ footer span{
 	margin: 0px;
 	padding:10px;
 	color:black;
+	font-family: RobotoFont;
 }
 #contentBody{
 	position: relative;
@@ -166,4 +171,10 @@ color:black;
 	margin: 0px;
 	padding:10px;
 	color:black;
+	padding-bottom: 0;
+}
+.btnImg{
+	float:left;
+	margin:0px;
+	padding:0px;
 }
