@@ -10,9 +10,9 @@ th {
   font-weight        : 300;
   color              : #fff;
   background-image   : -webkit-linear-gradient(bottom,rgb(202,0,89), rgb(243,0,107) );
-  background-image   :    -moz-linear-gradient(bottom,rgb(202,0,89), rgb(243,0,107) );
+/*  background-image   :    -moz-linear-gradient(bottom,rgb(202,0,89), rgb(243,0,107) );
   background-image   :     -ms-linear-gradient(bottom,rgb(202,0,89), rgb(243,0,107) );
-  background-image   :         linear-gradient(bottom,rgb(202,0,89), rgb(243,0,107) );
+  background-image   :         linear-gradient(bottom,rgb(202,0,89), rgb(243,0,107) );*/
   -webkit-transition : all 0.3s;
   -moz-transition    : all 0.3s;
   -ms-transition     : all 0.3s;
@@ -41,12 +41,6 @@ th.table-sort {
   cursor        : pointer;
 }
 
-th.table-sort:hover {
-  background-image : -webkit-linear-gradient(bottom,rgb(216,0,95), rgb(252,29,127) );
-  background-image :    -moz-linear-gradient(bottom,rgb(216,0,95), rgb(252,29,127) );
-  background-image :     -ms-linear-gradient(bottom,rgb(216,0,95), rgb(252,29,127) );
-  background-image :         linear-gradient(bottom,rgb(216,0,95), rgb(252,29,127) );
-}
 
 .table-sort-field {
   position: relative;
@@ -121,7 +115,7 @@ th.table-sort:hover {
 
 .table-sort-highlight {
   color      : #fff;
-  background : rgb(255,86,174);
+  background : #B2DFDB;
 }
 
 .table-sort-search-count {
@@ -136,4 +130,21 @@ th.table-sort:hover {
   background-image : -moz-linear-gradient(bottom,rgb(94,108,117), rgb(145,162,177) );
   background-image : -ms-linear-gradient(bottom,rgb(94,108,117), rgb(145,162,177) );
   background-image : linear-gradient(bottom,rgb(94,108,117), rgb(145,162,177) );
+}
+td {
+  padding: 4px; 
+  border: 1px #CCC solid; 
+  width: 100px; 
+  cursor:pointer;
+  font-size:16px;
+  text-align: center}
+th{
+  cursor: pointer;
+  font-size:16px;
+  background-color: #00695C;
+}
+#tableContainer{
+  width: 80%;
+  position: relative;
+  margin:0px;
 }
