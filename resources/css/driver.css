@@ -69,7 +69,7 @@ section{
 	width: 80%;
 	height: 80%;
 }
-#charts{
+#charts, #tables{
 	position: relative;
 	margin:auto;
 	left: 0;

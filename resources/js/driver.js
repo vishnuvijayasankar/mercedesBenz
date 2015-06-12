@@ -256,4 +256,39 @@ $(function () {
         }
         
     });
+
+
+
+
+    var $table = $('#table_data');
+    $.getJSON('../assets/json/data.json', function(data) {
+        $.each(data.Drivers,function(key,value) {
+            var avgScore = 0;
+            var avgAcc = 0;
+            var avgBrake = 0;
+            var avgTurn = 0;
+            var avgCrash = 0;
+            for(var i=0 ; i<7 ; i++) {
+                avgScore += value.score[i];
+                avgAcc += value.acceleration[i];
+                avgBrake += value.break[i];
+                avgTurn += value.turn[i];
+                avgCrash += value.crash[i]; 
+            }
+            avgScore = avgScore/7;
+            avgAcc = avgAcc/7;
+            avgBrake = avgBrake/7;
+            avgTurn = avgTurn/7;
+            avgCrash = avgCrash/7;
+
+            avgScore = avgScore.toFixed(2);
+            avgAcc = avgAcc.toFixed(2);
+            avgBrake = avgBrake.toFixed(2);
+            avgTurn = avgTurn.toFixed(2);
+            avgCrash = avgCrash.toFixed(2);
+
+
+            $table.append('<tr><td>'+value.name+'</td><td>'+avgScore+'</td><td>'+avgAcc+'</td><td>'+avgBrake+'</td><td>'+avgTurn+'</td><td>'+avgCrash+'</td></tr>');
+        });
+    }); 
 });
