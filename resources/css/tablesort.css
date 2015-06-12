@@ -1,5 +1,5 @@
 table {
-  width           : 100%;
+  /*width           : 100%;*/
   margin-bottom   : 10px;
   border-collapse : collapse;
   background      : #fff;
@@ -9,15 +9,14 @@ table {
 th {
   font-weight        : 300;
   color              : #fff;
-  /*background-image   : -webkit-linear-gradient(bottom,rgb(202,0,89), rgb(243,0,107) );*/
-/*  background-image   :    -moz-linear-gradient(bottom,rgb(202,0,89), rgb(243,0,107) );
-  background-image   :     -ms-linear-gradient(bottom,rgb(202,0,89), rgb(243,0,107) );
-  background-image   :         linear-gradient(bottom,rgb(202,0,89), rgb(243,0,107) );*/
   -webkit-transition : all 0.3s;
   -moz-transition    : all 0.3s;
   -ms-transition     : all 0.3s;
   -o-transition      : all 0.3s;
   transition         : all 0.3s;
+  font-size:16px;
+  background-color: #00695C;
+  background-image: -webkit-linear-gradient(bottom,rgba(0,0,0,0.1),rgba(0,0,0,0.0));
 }
 
 td {
@@ -40,7 +39,6 @@ th.table-sort {
   text-align    : left;
   cursor        : pointer;
 }
-
 
 .table-sort-field {
   position: relative;
@@ -90,13 +88,14 @@ th.table-sort {
   padding          : 3px 8px;
   position         : relative;
   width: 100%;
+  margin-left: 1px;
 }
 
 .table-sort-search-input {
   -webkit-appearance : none;
   width              : 96%;
   height             : 25px;
-  padding            : 0 10px;
+  padding            : 0 6px;
   border             : 1px solid rgb(50,50,50);
   border-radius      : 6px;
   font-size          : 13px;
@@ -137,14 +136,17 @@ td {
   width: 100px; 
   cursor:pointer;
   font-size:16px;
-  text-align: center}
-th{
-  cursor: pointer;
-  font-size:16px;
-  background-color: #00695C;
+  text-align: center
 }
+
+  th.table-sort:hover {
+  background-color: #004d40;
+}  
+
 #tableContainer{
-  width: 80%;
-  position: relative;
   margin:0px;
+}
+
+#crashes {
+  border-right: none;
 }
