@@ -1,7 +1,7 @@
 {
 	"Drivers": 	[
 		{
-			"name": "M Schumacher",
+			"name": "Vishnu",
 			"id": "driver1",
 			"score": [75,87,41,76,89,69,81],
 			"acceleration": [7,6,2,8,1,4,6],
@@ -11,7 +11,7 @@
 			"image":"../assets/images/schumacher.jpg"
 		},
 		{
-			"name": "Valentino Rossi",
+			"name": "Lawry",
 			"id": "driver2",
 			"score": [87,41,76,89,69,81,75],
 			"acceleration": [6,2,8,1,4,6,7],
