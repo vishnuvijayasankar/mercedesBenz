@@ -290,5 +290,6 @@ $(function () {
 
             $table.append('<tr><td>'+value.name+'</td><td>'+avgScore+'</td><td>'+avgAcc+'</td><td>'+avgBrake+'</td><td>'+avgTurn+'</td><td>'+avgCrash+'</td></tr>');
         });
-    }); 
+    });
+    $('table.table-sort').tablesort(); 
 });
