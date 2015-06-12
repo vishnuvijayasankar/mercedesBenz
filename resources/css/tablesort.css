@@ -95,11 +95,12 @@ th.table-sort:hover {
   background-image : linear-gradient(bottom,rgb(63, 63, 63),rgb(73, 73, 73));
   padding          : 3px 8px;
   position         : relative;
+  width: 100%;
 }
 
 .table-sort-search-input {
   -webkit-appearance : none;
-  width              : 100%;
+  width              : 96%;
   height             : 25px;
   padding            : 0 10px;
   border             : 1px solid rgb(50,50,50);
