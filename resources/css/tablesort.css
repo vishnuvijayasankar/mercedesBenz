@@ -9,7 +9,7 @@ table {
 th {
   font-weight        : 300;
   color              : #fff;
-  background-image   : -webkit-linear-gradient(bottom,rgb(202,0,89), rgb(243,0,107) );
+  /*background-image   : -webkit-linear-gradient(bottom,rgb(202,0,89), rgb(243,0,107) );*/
 /*  background-image   :    -moz-linear-gradient(bottom,rgb(202,0,89), rgb(243,0,107) );
   background-image   :     -ms-linear-gradient(bottom,rgb(202,0,89), rgb(243,0,107) );
   background-image   :         linear-gradient(bottom,rgb(202,0,89), rgb(243,0,107) );*/
@@ -47,7 +47,7 @@ th.table-sort {
 }
 
 .table-sort-control {
-  background-image: -webkit-linear-gradient(bottom,rgba(0,0,0,0.1),rgba(0,0,0,0.0));
+  /*background-image: -webkit-linear-gradient(bottom,rgba(0,0,0,0.1),rgba(0,0,0,0.0));*/
   height    : 32px;
   width     : 16px;
   position  : absolute;
@@ -82,11 +82,11 @@ th.table-sort {
 
 /* Table Sort Search */
 .table-sort-search-container {
-  background-image : -webkit-linear-gradient(bottom,rgb(63, 63, 63),rgb(73, 73, 73));
+/*  background-image : -webkit-linear-gradient(bottom,rgb(63, 63, 63),rgb(73, 73, 73));
   background-image : -ms-linear-gradient(bottom,rgb(63, 63, 63),rgb(73, 73, 73));
   background-image : -o-linear-gradient(bottom,rgb(63, 63, 63),rgb(73, 73, 73));
   background-image : -moz-linear-gradient(bottom,rgb(63, 63, 63),rgb(73, 73, 73));
-  background-image : linear-gradient(bottom,rgb(63, 63, 63),rgb(73, 73, 73));
+  background-image : linear-gradient(bottom,rgb(63, 63, 63),rgb(73, 73, 73));*/
   padding          : 3px 8px;
   position         : relative;
   width: 100%;
@@ -126,10 +126,10 @@ th.table-sort {
   border-radius    : 3px;
   line-height      : 19px;
   color            : #fff;
-  background-image : -webkit-linear-gradient(bottom,rgb(94,108,117), rgb(145,162,177) );
+/*  background-image : -webkit-linear-gradient(bottom,rgb(94,108,117), rgb(145,162,177) );
   background-image : -moz-linear-gradient(bottom,rgb(94,108,117), rgb(145,162,177) );
   background-image : -ms-linear-gradient(bottom,rgb(94,108,117), rgb(145,162,177) );
-  background-image : linear-gradient(bottom,rgb(94,108,117), rgb(145,162,177) );
+  background-image : linear-gradient(bottom,rgb(94,108,117), rgb(145,162,177) );*/
 }
 td {
   padding: 4px; 
