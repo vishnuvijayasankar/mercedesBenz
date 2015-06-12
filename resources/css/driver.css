@@ -4,7 +4,7 @@
 }
 @font-face {
    font-family: RobotoFont;
-   src: url(../../assets/fonts/Roboto-Regular);
+   src: url(../../assets/fonts/Roboto-Regular.ttf);
 }
 html{
 	font-family: NewFont;
@@ -70,14 +70,14 @@ section{
 	width: 80%;
 	height: 80%;
 }
-#charts{
+#charts, #tables{
 	position: relative;
 	margin:auto;
 	left: 0;
 	right: 0;
 	width: 80%;
 	margin-top: 5px;
-	height: 50%;
+	height: 78%;
 	background-color: white;
 	box-shadow: 10px 10px 5px 0px rgba(177, 167, 163, 1);
 

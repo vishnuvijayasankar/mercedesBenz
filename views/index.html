@@ -25,34 +25,52 @@
     <section id="driverList">
     	<h3>DRIVERS</h3>
 			<div id="drivers" class="driverName">
-				<div  class="optionsButton"><input type="radio" id="alldriver" name="driver" value="male" checked><img src="../assets/images/user.png"><label for="alldriver">All Drivers</label></div>
+				<div  class="optionsButton">
+					<input type="radio" id="alldriver" name="driver" value="allDrivers" checked>
+					<img src="../assets/images/user.png">
+					<label for="alldriver">All Drivers</label>
+				</div>
 			</div>
 		 
     </section>
     <section id="parametersList">
     	<h3>PARAMETERS</h3>
-    	<form>
-			<div  
-				class="optionsButton"><input type="radio" name="options" id="score" value="score" checked><label for="score">Score</label>
-			</div>
-			<div  
-				class="optionsButton"><input type="radio" name="options" id="acceleration" value="acceleration"><label for="acceleration">Acceleration</label>
-			</div>
-			<div  
-				class="optionsButton"><input type="radio" name="options" id="breakdowns" value="breakdowns"><label for="breakdowns">Breakdowns</label>
-			</div>
-			<div  
-				class="optionsButton"><input type="radio" name="options" id="turns" value="turns"><label for="turns">Turns</label>
-			</div>
-			<div  
-				class="optionsButton"><input type="radio" name="options" id="crashes" value="crashes"><label for="crashes">Crashes</label>
-			</div>
-		</form> 
-	    </section>
+    	<div class="optionsButton">
+    		<input type="radio" name="options" id="score" value="Scores" checked>
+    		<label for="score">Score</label>
+		</div>
+		<div  class="optionsButton">
+			<input type="radio" name="options" id="acceleration" value="Acceleration">
+			<label for="acceleration">Acceleration</label>
+		</div>
+		<div class="optionsButton">
+			<input type="radio" name="options" id="breakdowns" value="Breaks">
+			<label for="breakdowns">Breakdowns</label>
+		</div>
+		<div class="optionsButton">
+			<input type="radio" name="options" id="turns" value="Turns">
+			<label for="turns">Turns</label>
+		</div>
+		<div class="optionsButton">
+			<input type="radio" name="options" id="crashes" value="Crashes">
+			<label for="crashes">Crashes</label>
+		</div>
+	</section>
 </div>
 	<div id="content">
 		<div id="charts"></div>
-		<div id="table"></div>
+		<div id="table">
+			<table id="table_data">
+				<tr>
+					<th>DRIVER NAME</th>
+					<th>SCORE</th>
+					<th>ACCELERATIONS</th>
+					<th>BRAKES</th>
+					<th>SHARP TURNS</th>
+					<th>CRASHES</th>
+				</tr>
+			</table>
+		</div>
 	</div>
 </div>
 	<footer>
