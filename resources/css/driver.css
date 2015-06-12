@@ -14,6 +14,7 @@ body{
 	background-color: #D4CEBE;
 	height:100%;
 	margin:0px;
+	overflow-x:hidden;
 }
 #Logo{
 	height:50px;
@@ -141,6 +142,7 @@ footer span{
 	padding: 5%;
 	height: 70%;
 	margin-bottom: 150px;
+	padding-right:0px;
 }
 .optionsButton{
 	margin-top: 10px;
