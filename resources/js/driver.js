@@ -9,7 +9,7 @@ $(function () {
     });
 
     for(var i=0;i<driverList.length;i++) {
-        $('#drivers').append('<div class="optionsButton"><input type="radio" id="'+driverList[i].id+'" name="driver" value="'+driverList[i].id+'"><img src="'+driverList[i].image+'">'+'<label for="'+driverList[i].id+'">'+driverList[i].name+'</label></div>');
+        $('#drivers').append('<label for="'+driverList[i].id+'"><div class="optionsButton"><input type="radio" id="'+driverList[i].id+'" name="driver" value="'+driverList[i].id+'"><img src="'+driverList[i].image+'">'+'<label>'+driverList[i].name+'</div></label>');
     }
 
     var ScoresData = new Array();
