@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Dashboard</title>
+	<title>Home</title>
 	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="../resources/css/driver.css">
 	<link rel="stylesheet" type="text/css" href="../resources/css/tablesort.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/home.css">
 	<link rel="icon" type="image/png" href="../assets/images/android-icon-48x48.png">
 	<meta charset="UTF-8">
 </head>
@@ -17,77 +18,39 @@
 <a style="border: none;" href="">New Cars</a>
 <a href="">Service and Parts</a>
 <a href="">Accessories</a>
+<a href="">Mercedes World</a>
 <a href="">Careers</a>
-<a href="home.html">Home</a>
 </span>
 </nav>
-<div id="contentBody">
-
+<div id="mainBody">
+<div>
+<img id="backgroudImg" src="../assets/images/benzcar.png">
+</div>
 <div id="optionsList">
-    <section id="driverList">
-    	<h3>DRIVERS</h3>
+    <section id="menuList">
+    	<h3>MENU</h3>
 			<div id="drivers" class="driverName">
-			<label for="alldriver">
-				<div  class="optionsButton">
-					<input type="radio" id="alldriver" name="driver" value="allDrivers" checked>
-					<img src="../assets/images/user.png">
-					<label>All Drivers</label>
-				</div>
-			</label>
+				<label for="alldriver">
+				<a href="dashboard.html">
+					<div  class="optionsButton">
+						
+						<label>DASHBOARD</label>
+					</div>
+				</a>
+				</label>
+				<label for="alldriver">
+					<a href="http://manuprasadmp.github.io/Route-Explorer/views/">
+					<div  class="optionsButton">
+						<label>TRIPS</label>
+					</div>
+					</a>
+				</label>
 			</div>
-		 
-    </section>
-    <section id="parametersList">
-    	<h3>PARAMETERS</h3>
-    	<label for="score" style="margin-top: 10px;">
-    	<div class="optionsButton">
-    		<input type="radio" name="options" id="score" value="Scores" checked>
-    		<label>Score</label>
-		</div>
-		</label>
-		<label for="acceleration">
-		<div  class="optionsButton">
-			<input type="radio" name="options" id="acceleration" value="Acceleration">
-			<label >Acceleration</label>
-		</div>
-		</label>
-		<label for="breakdowns">
-		<div class="optionsButton">
-			<input type="radio" name="options" id="breakdowns" value="Breaks">
-			<label >Breakdowns</label>
-		</div>
-		</label>
-		<label for="turns">
-		<div class="optionsButton">
-			<input type="radio" name="options" id="turns" value="Turns">
-			<label >Turns</label>
-		</div>
-		</label>
-		<label for="crashes">
-		<div class="optionsButton">
-			<input type="radio" name="options" id="crashes" value="Crashes">
-			<label>Crashes</label>
-		</div>
-		</label>
 	</section>
 </div>
 	<div id="content">
 		<div id="charts"></div>
-		<div id="table">
-			<table id="tableContainer" class="table-sort table-sort-search">
-				<thead>
-					<th class="table-sort">DRIVER NAME</th>
-					<th class="table-sort">SCORE</th>
-					<th class="table-sort">ACCELERATIONS</th>
-					<th class="table-sort">BRAKES</th>
-					<th class="table-sort">SHARP TURNS</th>
-					<th id="crashes" class="table-sort">CRASHES</th>
-				</thead>
-				<tbody id="table_data">
-					
-				</tbody>
-			</table>
-		</div>
+		
 	</div>
 </div>
 	<footer>
@@ -98,11 +61,11 @@
 		<span>Legal Notice</span>
 	</footer>
 	
-	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<!-- <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script src="http://code.highcharts.com/highcharts.js"></script>
 	<script src="../resources/js/driver.js"></script>
 	<script src="../resources/js/data.js"></script>
-	<script src="../resources/js/tablesort.js"></script> 
+	<script src="../resources/js/tablesort.js"></script>  -->
 
 </body>
 </html>
