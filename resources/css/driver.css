@@ -222,3 +222,13 @@ th{
 	margin-top: 60px;
 	box-shadow: 10px 10px 5px 0px #B1A7A3;
 }
+#menu{
+	float: left;
+	padding: 10px;
+	margin: 10px;
+	display: inline-block;
+	color: #FFF;
+	background-color: #00695C;
+	cursor: pointer;
+	border-radius: 5px;
+}
