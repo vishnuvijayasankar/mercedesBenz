@@ -232,3 +232,6 @@ th{
 	cursor: pointer;
 	border-radius: 5px;
 }
+#colorPicker{
+	float: right;
+}
